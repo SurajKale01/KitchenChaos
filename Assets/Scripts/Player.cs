@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
-        Debug.Log(Time.deltaTime);
+        float rotateSpeed = 10f;
+
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 }
