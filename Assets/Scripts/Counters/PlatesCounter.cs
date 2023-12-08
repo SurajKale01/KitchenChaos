@@ -23,7 +23,7 @@ public class PlatesCounter : BaseCounter
         {
             spawnPlateTimer = 0f;
 
-            if(platesSpawnedAmount < spawnPlateTimerMax )
+            if(platesSpawnedAmount < platesSpawnedAmountMax )
             {
                 platesSpawnedAmount++;
 

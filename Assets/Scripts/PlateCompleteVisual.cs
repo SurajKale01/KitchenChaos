@@ -30,7 +30,7 @@ public class PlateCompleteVisual : MonoBehaviour
     {
         foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {
-            if(kitchenObjectSOGameObject.kitchenObjectSO == e.KitchenObjectSO)
+            if (kitchenObjectSOGameObject.kitchenObjectSO == e.kitchenObjectSO)
             {
                 kitchenObjectSOGameObject.gameObject.SetActive(true);
             }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class PlateKitchenObject : KitchenObject
@@ -10,7 +9,7 @@ public class PlateKitchenObject : KitchenObject
     public event EventHandler<OnIngredientAddedEventArgs> OnIngredientAdded;
     public class OnIngredientAddedEventArgs : EventArgs
     {
-        public KitchenObjectSO KitchenObjectSO;
+        public KitchenObjectSO kitchenObjectSO;
     }
 
 
@@ -43,11 +42,16 @@ public class PlateKitchenObject : KitchenObject
 
             OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs
             {
-                KitchenObjectSO = kitchenObjectSO
+                kitchenObjectSO = kitchenObjectSO
             });
             return true;
         }
-        
+
+    }
+
+    public List<KitchenObjectSO> GetKitchenObjectSOList()
+    {
+        return kitchenObjectSOList;
     }
 
 }
