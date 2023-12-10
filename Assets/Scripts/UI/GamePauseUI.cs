@@ -24,6 +24,7 @@ public class GamePauseUI : MonoBehaviour
         {
             OptionsUI.Instance.Show();
         });
+
     }
 
     private void Start()
